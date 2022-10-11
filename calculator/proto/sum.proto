@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package calculator;
+
+option go_package = "github.com/rytsh/grpc-tutorial/calculator/proto";
+
+message SumRequest {
+  int64 a = 1;
+  int64 b = 2;
+}
+
+message SumResponse {
+  int64 sum = 1;
+}

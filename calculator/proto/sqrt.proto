@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package calculator;
+
+option go_package = "github.com/rytsh/grpc-tutorial/calculator/proto";
+
+message SqrtRequest {
+  int64 number = 1;
+}
+
+message SqrtResponse {
+  double number = 1;
+}

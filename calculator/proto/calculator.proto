@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package calculator;
+
+option go_package = "github.com/rytsh/grpc-tutorial/calculator/proto";
+
+import "sum.proto";
+import "prime.proto";
+import "avg.proto";
+import "max.proto";
+import "sqrt.proto";
+
+service Calculator {
+  rpc Sum(SumRequest) returns (SumResponse) {}
+  rpc Prime(PrimeRequest) returns (stream PrimeResponse) {}
+  rpc Avg(stream AvgRequest) returns (AvgResponse) {}
+  rpc Max(stream MaxRequest) returns (stream MaxResponse) {}
+  rpc Sqrt(SqrtRequest) returns (SqrtResponse) {}
+}
